@@ -1,12 +1,8 @@
-# Il file è stato scaricato da un progetto eseguito su Colaboratory
-# ed in parte è stato rielaborato per funzionare come script
-import tensorflow as tf
+'''
+Il file è stato scaricato da un progetto eseguito su Colaboratory
+ed in parte è stato rielaborato per funzionare come script
+'''
 import os
-
-'''
-# Controllo la versione di Tensorflow
-tf.version.VERSION
-'''
 
 '''
 # Monto la directory di Google Drive
