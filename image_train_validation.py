@@ -73,7 +73,7 @@ def split_data(SOURCE, TRAINING, VALIDATION, TRAIN_SIZE):
         if(os.path.getsize(image_src) > 0):
             dataset_new.append(image_name)
         else:
-            print(image_name + " is zero length, so ignoring")
+            print(image_name + " il file è di dimensione 0, probabilmente l'immagine è corrotta")
     
     # Creo un nuovo dataset con url randomizzati
     shuffled_set = random.sample(dataset_new, len(dataset_new))

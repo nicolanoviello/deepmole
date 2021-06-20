@@ -54,6 +54,7 @@ train_datagen = ImageDataGenerator(
     horizontal_flip=True,
     fill_mode='nearest')
 # Creo un datagen specifico per MobileNet
+# senza augmentation per i test
 datagen = ImageDataGenerator(
     preprocessing_function= \
     tf.keras.applications.mobilenet.preprocess_input)
@@ -138,11 +139,11 @@ OUTPUT
 {'akiec': 0, 'bcc': 1, 'bkl': 2, 'df': 3, 'mel': 4, 'nv': 5, 'vasc': 6}
 '''
 class_weights={
-    0: 1.0, # 'akiec': 'Cheratosi Attinica'
-    1: 1.3, # 'bcc': 'Carcinoma Basocellulare'
-    2: 0.8, # 'bkl': 'Cheratosi Benigna'
-    3: 1.3, # 'df': 'Dermatofibroma'
-    4: 3.8, # 'mel': 'Melanoma'
+    0: 2.0, # 'akiec': 'Cheratosi Attinica'
+    1: 2.0, # 'bcc': 'Carcinoma Basocellulare'
+    2: 1.0, # 'bkl': 'Cheratosi Benigna'
+    3: 1.0, # 'df': 'Dermatofibroma'
+    4: 3.0, # 'mel': 'Melanoma'
     5: 1.0, # 'nv': 'Neo Melanocitico'
     6: 1.0, # 'vasc': 'Lesione Vascolare'
 }
