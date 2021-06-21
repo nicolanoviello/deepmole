@@ -67,13 +67,15 @@ train_batches = train_datagen.flow_from_directory(TRAINING_DIR,
 valid_batches = datagen.flow_from_directory(VALIDATION_DIR,
                                             target_size=(image_size,image_size),
                                             batch_size=val_batch_size)
-
+'''
 # Creo i bach di test
 # Note: shuffle=False perché il dataset di test non deve essere randomizzato
+# Tensorflow 2.0 usa validation sia per loss che per metrics
 test_batches = datagen.flow_from_directory(VALIDATION_DIR,
                                             target_size=(image_size,image_size),
                                             batch_size=1,
                                             shuffle=False)
+'''
 
 '''
 Definizione del modello
